@@ -11,6 +11,7 @@ class TaskModel {
   required this.titulo, 
   required this.feito, 
   required this.descricao
+  
     }
   );
 }
