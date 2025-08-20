@@ -1,18 +1,18 @@
-class TaskBloc extends Bloc<TaskEvent, TaskState>{
+import 'package:todobloc/bloc/task_bloc.dart';  
+import 'package:todobloc/bloc/task_event.dart';
+import 'package:todobloc/bloc/task_state.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
+class TaskBloc extends Bloc<TaskEvent, TaskState> {
 
-  TaskBloc(): super(InicialState()) {
-    on<AddTaskEvent>((event, emit) {
-      // Logic to handle adding a task
+  TaskBloc() : super(InicialState()) {
+    on<TaskAdded>((event, emit) {
+      // Handle task addition logic
     });
-
-    on<RemoveTaskEvent>((event, emit) {
-      // Logic to handle removing a task
-    });
-
-    on<UpdateTaskEvent>((event, emit) {
-      // Logic to handle updating a task
+    on<TaskRemoved>((event, emit) {
+      // Handle task removal logic
     });
   }
-
+  
 }
+
